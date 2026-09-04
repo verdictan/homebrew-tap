@@ -1,2 +1,1 @@
-# homebrew-verdictan
-Homebrew tap for Verdictan
+# Verdictan Homebrew Tap\n\nInstall Verdictan:\n\n```sh\nbrew tap verdictan/verdictan\nbrew trust verdictan/verdictan\nbrew install verdictan\n```\n\nHomebrew 6 requires explicit trust for third-party taps.\n
