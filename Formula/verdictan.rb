@@ -4,21 +4,21 @@ class Verdictan < Formula
   if OS.mac?
     if Hardware::CPU.arm?
       url "https://github.com/verdictan/packages/releases/download/v0.1.16/verdictan-aarch64-apple-darwin.tar.gz"
-      sha256 "2cd00eca3d10a214d247467914fa0611bd694031a4d20b72365398cf58f4949f"
+      sha256 "4ab63fdb466c8e2e53d340c23471a297193d84506c0d4e8c9d96369b38e47dda"
     end
     if Hardware::CPU.intel?
       url "https://github.com/verdictan/packages/releases/download/v0.1.16/verdictan-x86_64-apple-darwin.tar.gz"
-      sha256 "90d2cd63ed45a51ef03b46581690d3d1bf383afcee11a22fcbd40d1f1fde96c7"
+      sha256 "0094e6fe1c5cab60acc7bc1258e2d62bdf94ac68458f9fdc9f5e600701b1ccdf"
     end
   end
   if OS.linux?
     if Hardware::CPU.arm?
       url "https://github.com/verdictan/packages/releases/download/v0.1.16/verdictan-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "882d89fab2fd9f17a04ce09241989e72eee338c6980fa2603de7b5fd39f23a30"
+      sha256 "870bb75938c2e9d6a632958f34f1a820902b2daa5c39a7225e33220fbf12588e"
     end
     if Hardware::CPU.intel?
       url "https://github.com/verdictan/packages/releases/download/v0.1.16/verdictan-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "1ad99a02a373c7d7a8033ead4f713340166ef24401cc96c52695f8005a1f3c28"
+      sha256 "a3f1f2595c9d00398fa1437ecd4be02a55c3befd0af966d375c510651b2b3309"
     end
   end
   license "BUSL-1.1"
