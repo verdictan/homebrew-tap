@@ -1,8 +1,8 @@
 cask "kalkidan" do
   arch arm: "arm64", intel: "x64"
-  version "0.1.0-build.1792659461.1e82144a8674"
-  sha256 arm: "a5d50f729aec82965fd77869cf1a1eeb3e1ba39c71f05b4724d8e60a155e7152",
-         intel: "5803857d8919e9d27e2f773a6226a69ec4cd6afc32d9b577be93f85543795b18"
+  version "0.1.0-build.1792665259.ac73aedffa70"
+  sha256 arm: "78e0684e4ab1b6768b9db1f8bdbc8484f611bf9e3acd7206024d94abb816b299",
+         intel: "9dc4edd1d60af928e136b51ac21b101bb3b55db83e93e474977f95f2611a6ce1"
 
   url "https://github.com/verdictan/packages/releases/download/kalkidan-v#{version}/Kalkidan-#{version}-mac-#{arch}.dmg"
   name "Kalkidan"
