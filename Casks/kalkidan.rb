@@ -1,7 +1,7 @@
 cask "kalkidan" do
   depends_on arch: :arm64
-  version "0.1.0-build.1792850538.be0a4d5b9aa3"
-  sha256 "1b4c7e013bc584a43a148495d45890205fa5f08c71e1a3ff199032f211b2f99b"
+  version "0.1.0-build.1792856927.fcf8ef2dcf36"
+  sha256 "133913fb9e933543486485c34197f768fad1f1b884dd641687eef98bb644f1b3"
 
   url "https://github.com/verdictan/packages/releases/download/kalkidan-v#{version}/Kalkidan-#{version}-mac-arm64.dmg"
   name "Kalkidan"
