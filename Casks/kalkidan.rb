@@ -1,6 +1,6 @@
 cask "kalkidan" do
-  version "0.1.0-build.1793179958.d7427fa4ab35"
-  sha256 "148de1e0050c2062ca04e60fee135d6e58c3e8f1abd381fb10b726cbae786db0"
+  version "0.1.0-build.1793180252.ac81abcb4988"
+  sha256 "67abf1bc5453b1c295c9c24b9c52a46ddadf2bca3b31d8a6030c877e34005a4f"
 
   url "https://github.com/verdictan/packages/releases/download/kalkidan-v#{version}/Kalkidan-#{version}-mac-arm64.dmg"
   name "Kalkidan"
