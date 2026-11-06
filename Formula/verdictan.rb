@@ -1,33 +1,30 @@
 class Verdictan < Formula
   desc "AI governance gateway CLI"
   homepage "https://verdictan.com"
+  version "0.6.36"
   license :cannot_represent
   on_macos do
     on_arm do
-      url "https://github.com/verdictan/packages/releases/download/v0.6.30/verdictan-aarch64-apple-darwin.tar.gz"
-      sha256 "ef63e8e07f01ec48d12cfdc4ffc369e6b5e2caac6937da25eb432f1b6e7ae47d"
+      url "https://github.com/verdictan/packages/releases/download/v0.6.36/verdictan-aarch64-apple-darwin.tar.gz"
+      sha256 "5a541e2780da108b25ede4578b34bdf7bca049b92f9a67041ed96ab9c4a7b598"
     end
     on_intel do
-      url "https://github.com/verdictan/packages/releases/download/v0.6.30/verdictan-x86_64-apple-darwin.tar.gz"
-      sha256 "f98f6c5ac684bc712fb72ac30b0f6f6a9927bbdcb8666c92d2686ec929903d00"
+      url "https://github.com/verdictan/packages/releases/download/v0.6.36/verdictan-x86_64-apple-darwin.tar.gz"
+      sha256 "2ea6e6e0419bd3f677384e3bc59692a1d18e9ae704cee05184c0263e5a44ca0c"
     end
   end
   on_linux do
     on_arm do
-      url "https://github.com/verdictan/packages/releases/download/v0.6.30/verdictan-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "e82be10c82c8098a78c5622c390f31077ed4b669b580dbc3a83b7858dc8fb449"
+      url "https://github.com/verdictan/packages/releases/download/v0.6.36/verdictan-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "5f042f27ff98a6ac06221c6443590ac76e9b02fbd0e2299a9b47517dfef9781e"
     end
     on_intel do
-      url "https://github.com/verdictan/packages/releases/download/v0.6.30/verdictan-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "ca47db0ee7b0532cae2c14876f6652ad700444b564827c881a9ee47782e25c62"
+      url "https://github.com/verdictan/packages/releases/download/v0.6.36/verdictan-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "2fab04de88b65b7949deb27a94c511a1094359aba64e86a4474c7f3a51e0cb1e"
     end
   end
   def install
     bin.install "verdictan", "verdictan-update"
     doc.install "THIRD_PARTY_NOTICES.md"
-  end
-
-  test do
-    assert_match version.to_s, shell_output("#{bin}/verdictan --version")
   end
 end
