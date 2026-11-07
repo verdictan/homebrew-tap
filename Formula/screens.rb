@@ -1,9 +1,9 @@
 class Screens < Formula
   desc "Local screen registry and visual review workspace"
   homepage "https://github.com/verdictan/screens"
-  url "https://github.com/verdictan/screens/releases/download/v0.3.4/screens-0.3.4.tgz"
-  version "0.3.4"
-  sha256 "6307cb6bbd5d4f0a3bf800b98f98dd3ca27efc4ca4b126b75315ceae4dfbd0a7"
+  url "https://github.com/verdictan/screens/releases/download/v0.3.5/screens-0.3.5.tgz"
+  version "0.3.5"
+  sha256 "1d8a4add9bb9413b836942d9de1cb36d525203d0a40b5ebedafa42823e17710a"
 
   depends_on "node"
 
@@ -16,7 +16,7 @@ class Screens < Formula
   service do
     run [Formula["node"].opt_bin/"node",
          opt_libexec/"lib/node_modules/@verdictan/screens/src/cli.mjs",
-         "serve", "--host", "127.0.0.1", "--port", "4800"]
+         "serve", "--host", "127.0.0.1"]
     keep_alive true
     environment_variables PATH: std_service_path_env
     log_path var/"log/screens.log"
