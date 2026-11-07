@@ -1,16 +1,20 @@
 class Screens < Formula
   desc "Local screen registry and visual review workspace"
   homepage "https://github.com/verdictan/screens"
-  url "https://github.com/verdictan/screens/releases/download/v0.3.8/screens-0.3.8.tgz"
-  version "0.3.8"
-  sha256 "73f76fe2f809a634f7540bfac477e12bcea97a0cb246e0bf730ca6695d76dbbd"
+  url "https://github.com/verdictan/screens/releases/download/v0.3.9/screens-0.3.9.tgz"
+  version "0.3.9"
+  sha256 "76d356b9468a70e58a953c2192e07911e4f9fbd66206e7de183d1fba0db70ed4"
 
   depends_on "node"
 
   def install
-    ENV["PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD"] = "1"
-    system "npm", "install", *std_npm_args, "--omit=dev"
-    bin.install_symlink libexec.glob("bin/*")
+    app = libexec/"lib/node_modules/@verdictan/screens"
+    app.install buildpath.children
+    cd app do
+      system "npm", "ci", "--omit=dev", "--no-audit", "--no-fund"
+    end
+    chmod 0755, app/"src/cli.mjs"
+    bin.install_symlink app/"src/cli.mjs" => "screens"
   end
 
   service do
