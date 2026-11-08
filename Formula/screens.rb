@@ -4,17 +4,26 @@ class Screens < Formula
   url "https://github.com/verdictan/screens/releases/download/v0.3.12/screens-0.3.12.tgz"
   version "0.3.12"
   sha256 "35e045246729516feeb3479833554d612af1ad8e45c8ee7f1da9f6f101a2fef4"
+  revision 1
 
   depends_on "node"
 
   def install
     app = libexec/"lib/node_modules/@verdictan/screens"
     app.install buildpath.children
-    cd app do
-      system "npm", "ci", "--omit=dev", "--no-audit", "--no-fund"
-    end
     chmod 0755, app/"src/cli.mjs"
     bin.install_symlink app/"src/cli.mjs" => "screens"
+  end
+
+  post_install_steps do
+    run "{{HOMEBREW_PREFIX}}/opt/node/bin/npm",
+        args: ["ci", "--omit=dev", "--no-audit", "--no-fund"],
+        chdir: "{{libexec}}/lib/node_modules/@verdictan/screens",
+        env: {
+          "PATH" => "{{HOMEBREW_PREFIX}}/opt/node/bin:{{HOMEBREW_PREFIX}}/bin:/usr/bin:/bin:/usr/sbin:/sbin",
+        },
+        print_stdout: true,
+        network_access: true
   end
 
   service do
