@@ -1,9 +1,9 @@
 class Screens < Formula
   desc "Local screen registry and visual review workspace"
   homepage "https://github.com/verdictan/screens"
-  url "https://github.com/verdictan/screens/releases/download/v0.3.14/screens-0.3.14.tgz"
-  version "0.3.14"
-  sha256 "0d2a6cd67e349c60758f0d4c06fa9da5bacddbaf367c56ee086de28df53924aa"
+  url "https://github.com/verdictan/screens/releases/download/v0.3.15/screens-0.3.15.tgz"
+  version "0.3.15"
+  sha256 "c6e9638a0af4ed6dbc6e6e14256df56bdba4bcc52a92b9601fc8c30e13044639"
 
   depends_on "node"
 
@@ -15,8 +15,13 @@ class Screens < Formula
   end
 
   post_install_steps do
-    run "{{HOMEBREW_PREFIX}}/opt/node/bin/npm",
-        args: ["ci", "--omit=dev", "--no-audit", "--no-fund"],
+    run "/usr/bin/env",
+        args: [
+          "-u", "npm_config_store_dir",
+          "-u", "NPM_CONFIG_STORE_DIR",
+          "{{HOMEBREW_PREFIX}}/opt/node/bin/npm",
+          "ci", "--omit=dev", "--no-audit", "--no-fund",
+        ],
         chdir: "{{libexec}}/lib/node_modules/@verdictan/screens",
         env: {
           "PATH" => "{{HOMEBREW_PREFIX}}/opt/node/bin:{{HOMEBREW_PREFIX}}/bin:/usr/bin:/bin:/usr/sbin:/sbin",
