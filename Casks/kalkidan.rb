@@ -1,14 +1,14 @@
 cask "kalkidan" do
-  version "0.2.9"
-  arch arm: "arm64", intel: "x64"
-  sha256 arm: "c732ed25b1d6651a29b01bf9616b44953f0c8314ecd85e7f28e9d5e3c61bfb39", intel: "52323bc0498b5a8dfa61faaba851403d5845c398a89f93508bfe15a259f5945e"
+  version "0.2.10"
+  sha256 "13f6cc54f9f0bc03d8d12320d684e6b83fcc6f46d6aa62c74ef28c8be75a4983"
 
-  url "https://github.com/verdictan/packages/releases/download/kalkidan-v#{version}/Kalkidan-#{version}-mac-#{arch}.dmg"
+  url "https://github.com/verdictan/packages/releases/download/kalkidan-v#{version}/Kalkidan-#{version}-mac-arm64.dmg"
   name "Kalkidan"
   desc "Project, repository, and agent session manager"
   homepage "https://github.com/verdictan/kalkidan"
 
-  depends_on macos: ">= :ventura"
+  depends_on arch: :arm64
+  depends_on macos: ">= :tahoe"
 
   app "Kalkidan.app"
 end
