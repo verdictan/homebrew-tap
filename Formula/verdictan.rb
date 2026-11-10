@@ -1,26 +1,26 @@
 class Verdictan < Formula
   desc "AI governance gateway CLI"
   homepage "https://verdictan.com"
-  version "0.6.37"
+  version "0.6.38"
   license :cannot_represent
   on_macos do
     on_arm do
-      url "https://github.com/verdictan/packages/releases/download/v0.6.37/verdictan-aarch64-apple-darwin.tar.gz"
-      sha256 "b34eeb79ac441d4e692e32df095877d9ae6bee6459d627a232231c0e7d61e505"
+      url "https://github.com/verdictan/packages/releases/download/v0.6.38/verdictan-aarch64-apple-darwin.tar.gz"
+      sha256 "5b2d570cba5d8b862ca08403ed122f2d1cfb248024b585d99bf26fc4390f5b87"
     end
     on_intel do
-      url "https://github.com/verdictan/packages/releases/download/v0.6.37/verdictan-x86_64-apple-darwin.tar.gz"
-      sha256 "746f94e49dd221664612675303a7596f0fe1cdc475d6f81f7c5324da2aed32fb"
+      url "https://github.com/verdictan/packages/releases/download/v0.6.38/verdictan-x86_64-apple-darwin.tar.gz"
+      sha256 "ff77d4f62b90115c42fd707824ebc2c848d2ca78ae7945e399fde28304b1bb47"
     end
   end
   on_linux do
     on_arm do
-      url "https://github.com/verdictan/packages/releases/download/v0.6.37/verdictan-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "ce0b2dd2c8080e54a7c5d6ac94657eee95ffe2cd48ed8a04636d0dafdaf6dafa"
+      url "https://github.com/verdictan/packages/releases/download/v0.6.38/verdictan-aarch64-unknown-linux-gnu.tar.gz"
+      sha256 "c430467c2d929bcbd2b6e9743647715fc74b2b8ae0b2832d36d9ef28b962c94a"
     end
     on_intel do
-      url "https://github.com/verdictan/packages/releases/download/v0.6.37/verdictan-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "10ecb490b7e078fc8f3fe5cc685c6abd0faae320d38ec0faf1c85194b42ba824"
+      url "https://github.com/verdictan/packages/releases/download/v0.6.38/verdictan-x86_64-unknown-linux-gnu.tar.gz"
+      sha256 "2dbbf4d90a32bfcc6437f16c7787f2d63cc93c7932b105836c9f342516551d9e"
     end
   end
   def install
