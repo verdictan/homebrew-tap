@@ -1,9 +1,9 @@
 class Screens < Formula
   desc "Local screen registry and visual review workspace"
   homepage "https://github.com/verdictan/screens"
-  url "https://github.com/verdictan/screens/releases/download/v0.3.23/screens-0.3.23.tgz"
-  version "0.3.23"
-  sha256 "803af1f0f224755a325dfc0cb77dded5d97f9e4a258b7b25374c047982f6304c"
+  url "https://github.com/verdictan/screens/releases/download/v0.3.24/screens-0.3.24.tgz"
+  version "0.3.24"
+  sha256 "1f7ff2388a51ee3bad1d5408f6b96aea0240b54708c28f03c6760acd3bd83650"
 
   depends_on "node"
 
