@@ -6,21 +6,21 @@ class Verdictan < Formula
   on_macos do
     on_arm do
       url "https://github.com/verdictan/packages/releases/download/v0.6.52/verdictan-aarch64-apple-darwin.tar.gz"
-      sha256 "ffb634a4330250efceb859e7918953f3fc6bf1e5eae722feedea5e7590a311d4"
+      sha256 "84a3da5472f280be9462112f58fdad1065decee39891690ffa2b10c166a0ff44"
     end
     on_intel do
       url "https://github.com/verdictan/packages/releases/download/v0.6.52/verdictan-x86_64-apple-darwin.tar.gz"
-      sha256 "354b61c7c9130e38889c1e8aa449798325264957a6a85fb4735a58017c27e258"
+      sha256 "6227885f46123fcd9cabe904a68b1e98e775b20e974ca829404c923fa683fa60"
     end
   end
   on_linux do
     on_arm do
       url "https://github.com/verdictan/packages/releases/download/v0.6.52/verdictan-aarch64-unknown-linux-gnu.tar.gz"
-      sha256 "44984a79582359863177d462fe14c5f8aa0c00086b08c8a490330b8a926b6853"
+      sha256 "3b197917efef731f1dcad0e166810c5c48bb4b4084be3a5045c18c58b4b0cdf4"
     end
     on_intel do
       url "https://github.com/verdictan/packages/releases/download/v0.6.52/verdictan-x86_64-unknown-linux-gnu.tar.gz"
-      sha256 "cb1ea0ac9a64f700c2731b59cb0dbf40e33025125600c1417263e36be1f7a21b"
+      sha256 "700e37de293c646755bcd28c484d7e8424c4696ada0d534c11c9d379b0579aa8"
     end
   end
   def install
